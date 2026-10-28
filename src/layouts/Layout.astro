@@ -2,7 +2,7 @@
 import '../assets/styles.css';
 
 interface Props {
-  title: string;
+  title?: string;
   description?: string;
   image?: string;
 }
@@ -11,7 +11,7 @@ const {
   title = "GLHS Visual Arts & Dance Boosters", 
   description = "Visual Arts & Dance Boosters at Green Level High School in Cary, NC. We aim to enrich students' visual arts & dance educational experience.",
   image = "https://glhsvad.org/_astro/horiz-logo.DPBmxj-P.png" 
-} = Astro.props;
+} = Astro.props as Props;
 
 ---
 

@@ -1,0 +1,68 @@
+---
+// import { SITE } from "../site.config";
+import '../assets/styles.css';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footer-content">
+    <p>© {year} GLHS VAD Boosters</p>
+    <nav class="nav-links" aria-label="Social">  
+        <a href="">Instagram</a>
+        <a href="">Facebook</a>
+        <a href="https://greenlevelhs.wcpss.net/">Green Level High School</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+footer {
+    border-top: 1px solid #868fab;
+    background-color: white;
+    z-index: 10;
+}
+
+.footer-content {
+  display: flex;
+	align-items: center;
+	padding: 16px;
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+  gap: 1rem;
+
+.nav-links {
+  width: 100%;
+  margin: 0;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #0d0950;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: #868fab;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    margin-left: 5em;
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+}
+
+</style>
