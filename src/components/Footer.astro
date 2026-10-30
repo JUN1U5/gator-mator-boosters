@@ -5,64 +5,82 @@ import '../assets/styles.css';
 const year = new Date().getFullYear();
 ---
 
-<footer class="footer">
-  <div class="footer-content">
-    <p>© {year} GLHS VAD Boosters</p>
-    <nav class="nav-links" aria-label="Social">  
-        <a href="">Instagram</a>
-        <a href="">Facebook</a>
-        <a href="https://greenlevelhs.wcpss.net/">Green Level High School</a>
-    </nav>
+<footer class="site-footer">
+  <div class="site-footer__grid">
+    <div class="site-footer__column">
+      <h2 class="site-footer__heading">About Us</h2>
+      <p>
+        Green Level Visual Arts Dance Boosters Inc. is a 501(c)(3) non-profit organization dedicated to supporting the arts at Green Level High School.
+      </p>
+    </div>
+
+    <div class="site-footer__column">
+      <h2 class="site-footer__heading">Links</h2>
+      <ul class="site-footer__list">
+        <li><a href="https://gldance.weebly.com/">Dance</a></li>
+        <li><a href="https://glarts.weebly.com/">Visual Arts</a></li>
+      </ul>
+    </div>
+
+    <div class="site-footer__column">
+      <h2 class="site-footer__heading">Contact</h2>
+      <ul class="site-footer__list">
+        <li>Email: danceadmin@glhsvad.org</li>
+        <li>Location: <a href="https://greenlevelhs.wcpss.net/">Green Level High School</a></li>
+        <li>Address: 7600 Roberts Road, Cary, NC 27519</li>
+      </ul>
+    </div>
   </div>
 </footer>
 
+
+
 <style>
-footer {
+
+.site-footer {
     border-top: 1px solid #868fab;
     background-color: white;
     z-index: 10;
+    padding: 48px 24px;
 }
 
-.footer-content {
-  display: flex;
-	align-items: center;
-	padding: 16px;
-	width: 100%;
-	max-width: 800px;
-	margin: 0 auto;
-  gap: 1rem;
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-.nav-links {
-  width: 100%;
+.site-footer__heading {
+  margin: 0 0 16px;
+  font-size: 1.125rem;
+}
+
+.site-footer__list {
   margin: 0;
+  padding: 0;
+  list-style: none;
+  
 }
 
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
+.site-footer__list li + li {
+  margin-top: 10px;
+}
+
+.site-footer a {
+  color: #002E5D;
   text-decoration: none;
-  color: #0d0950;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-  color: #868fab;
+.site-footer a:hover {
+  text-decoration: underline;
 }
 
-@media screen and (min-width: 636px) {
-  .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
+@media (max-width: 768px) {
+  .site-footer__grid {
+    grid-template-columns: 1fr;
   }
 
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
-  }
-}
 
 </style>

@@ -2,7 +2,7 @@
 import '../assets/styles.css';
 ---
 
-<div id="container">
+<div id="container" class="officers">
 	<section id="info">
 		<h1>Officers for the 2026-2027 Boosters</h1>
 		<div class="cards">
@@ -22,8 +22,13 @@ import '../assets/styles.css';
 	</section>
 </div>
 
-
 <style>
+.officers {
+	padding-top:3rem;
+	padding-bottom:3rem;
+	height:33%;
+	}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
