@@ -11,25 +11,26 @@ import danceImage2 from '../assets/dance2_2026.jpg';
   <div class="feature-grid__item feature-grid__card">
       <h2 class="feature-grid__title">About Us</h2>
       <p>
-       Green Level Visual Arts Dance Boosters Inc. is a 501(c)(3) non-profit organization dedicated to supporting the arts at Green Level High School.
+       Green Level Visual Arts Dance Boosters Inc. is a registered 509(a)(2) public charity dedicated to supporting the arts at Green Level High School.
       </p>
-     <!-- 
-	  <p>
-        More text here if needed.
+	    <p>
+        EIN: 42-3012438
       </p>
-	  --> 
+      <p>
+        Location: 7600 Roberts Rd. Cary, NC 27519
+      </p>
     </div>
 
 
-<div class="feature-grid__item">
+<div class="feature-grid__item zoom-container">
     <img src={danceImage.src} alt="Dancers from the GLHS Dance Program" />
 </div>
 
-<div class="feature-grid__item">
+<div class="feature-grid__item zoom-container">
     <img src={vizImage.src} alt="GLHS student creating a mural in the hallways" />
 </div>
 
-<div class="feature-grid__item">
+<div class="feature-grid__item zoom-container">
 	<img src={danceImage2.src} alt="Dancers from the GLHS Dance Program" />
 </div>
 </section>
@@ -103,4 +104,22 @@ import danceImage2 from '../assets/dance2_2026.jpg';
     min-height: 220px;
   }
 }
+
+
+.zoom-container {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.zoom-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.zoom-container:hover img {
+  transform: scale(1.1);
+}
+
 </style>
