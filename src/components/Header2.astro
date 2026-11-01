@@ -5,7 +5,8 @@ import '../assets/styles.css'
 
 <header class="site-header">
   <div class="site-header__inner">
-    <h2 class="site-header__logo accent-text">GLHS Visual Arts & Dance Boosters</h2>
+    <p class="site-header__logo accent-text desktop-text">GLHS Visual Arts & Dance Boosters</p>
+    <p class="mobile-text accent-text">GLHS Arts Boosters</p>
 
     <button
       class="site-header__toggle"
@@ -130,4 +131,18 @@ import '../assets/styles.css'
     padding-top: 16px;
   }
 }
+
+.mobile-text {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .desktop-text {
+    display: none; /* Hide desktop text */
+  }
+  .mobile-text {
+    display: block; /* Show mobile text */
+  }
+}
+
 </style>
