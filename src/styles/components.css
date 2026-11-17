@@ -1275,6 +1275,7 @@ html:not(.js) .slider-nav {
   display: flex;
   flex-direction: column;
 }
+
 .cta--compact {
   min-height: clamp(560px, 52vw, 720px);
 }
@@ -1505,6 +1506,80 @@ html:not(.js) .slider-nav {
   transform: rotate(-45deg) translate(2px, -2px);
 }
 
+
+/* =========================================================
+   First visit
+   ========================================================= */
+.visit {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: clamp(40px, 6vw, 96px);
+  align-items: start;
+}
+.visit h2 {
+  font-size: var(--fs-h2);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+.visit__intro p {
+  margin: 18px 0 28px;
+  max-width: 380px;
+  color: var(--color-stone);
+  font-size: var(--fs-small);
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--color-line);
+}
+.steps li {
+  padding: 32px 32px 32px 0;
+  border-bottom: 1px solid var(--color-line);
+}
+.steps li:nth-child(even) {
+  padding-left: 32px;
+  padding-right: 0;
+  border-left: 1px solid var(--color-line);
+}
+.steps li::before {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--color-muted);
+  margin-bottom: 22px;
+}
+.steps h3 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+.steps p {
+  margin-top: 8px;
+  font-size: var(--fs-small);
+  color: var(--color-stone);
+  max-width: 320px;
+}
+.steps__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  color: var(--color-muted);
+}
+.visit__cta {
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+
+.visit__cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 /* =========================================================
    Responsive
    ========================================================= */
@@ -1622,6 +1697,9 @@ html:not(.js) .slider-nav {
   }
 }
 @media (max-width: 720px) {
+  .visit {
+    grid-template-columns: 1fr;
+  }
   .site-header {
     padding: 28px 0;
   }
@@ -1700,72 +1778,6 @@ html:not(.js) .slider-nav {
 }
 
 /* =========================================================
-   First visit
-   ========================================================= */
-.visit {
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: clamp(40px, 6vw, 96px);
-  align-items: start;
-}
-.visit h2 {
-  font-size: var(--fs-h2);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 1.08;
-}
-.visit__intro p {
-  margin: 18px 0 28px;
-  max-width: 380px;
-  color: var(--color-stone);
-  font-size: var(--fs-small);
-}
-.steps {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
-  border-top: 1px solid var(--color-line);
-}
-.steps li {
-  padding: 32px 32px 32px 0;
-  border-bottom: 1px solid var(--color-line);
-}
-.steps li:nth-child(even) {
-  padding-left: 32px;
-  padding-right: 0;
-  border-left: 1px solid var(--color-line);
-}
-.steps li::before {
-  display: block;
-  font-size: var(--fs-xs);
-  color: var(--color-muted);
-  margin-bottom: 22px;
-}
-.steps h3 {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.15;
-}
-.steps p {
-  margin-top: 8px;
-  font-size: var(--fs-small);
-  color: var(--color-stone);
-  max-width: 320px;
-}
-.steps__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 22px;
-  color: var(--color-muted);
-}
-.visit__cta {
-  margin-right: 12px;
-}
-
-/* =========================================================
    Team Grid
    ========================================================= */
 
@@ -1818,7 +1830,7 @@ html:not(.js) .slider-nav {
 
 .tile-badge,
 .tile-loc {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-family: ui-monospace, monospace;
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.04em;

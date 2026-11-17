@@ -12,7 +12,7 @@ import type { IconName } from '../types';
       <h2 id="visit-title">{visit.title}</h2>
       <p>{visit.intro}</p>
         <Button class="visit__cta" href={visit.cta.href}>{visit.cta.label}</Button>
-        <Button variant=line href={visit.cta2.href}>{visit.cta2.label}</Button>
+        <Button class="visit__cta" variant=line href={visit.cta2.href}>{visit.cta2.label}</Button>
     </div>
     <ol class="steps">
        {visit.steps.map((step) => (
