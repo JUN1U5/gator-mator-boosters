@@ -55,14 +55,8 @@ export const site: SiteConfig = {
       href: "https://greenlevelhs.wcpss.net/",
       icon: "globe",
     },
-    { label: "Viz Arts",
-      href: "https://glarts.weebly.com/",
-      icon: "globe",
-    },
-    { label: "Dance",
-      href: "https://glhsdance.org",
-      icon: "globe",
-    }
+    { label: "Viz Arts", href: "https://glarts.weebly.com/", icon: "globe" },
+    { label: "Dance", href: "https://glhsdance.org", icon: "globe" },
     // { label: 'YouTube', href: 'https://www.youtube.com/', icon: 'play' },
   ],
 

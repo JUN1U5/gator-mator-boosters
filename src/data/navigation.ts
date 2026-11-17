@@ -27,10 +27,13 @@ export const footerColumns: FooterColumn[] = [
     links: [
       { label: "Dance Program", href: "https://www.instagram.com/g_l_dance/" },
       { label: "Dance Team", href: "https://www.instagram.com/gl_danceteam" },
-      { label: "National Art Honors Society", href: "https://www.instagram.com/nahs.glhs" },
+      {
+        label: "National Art Honors Society",
+        href: "https://www.instagram.com/nahs.glhs",
+      },
     ],
   },
-    {
+  {
     title: "GLHS Visual Arts & Dance Boosters",
     links: [
       { label: "Home", href: "/" },

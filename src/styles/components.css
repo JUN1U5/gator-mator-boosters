@@ -687,7 +687,6 @@ font-family: var(--font-serif);
   font-size: var(--fs-xs);
 }
 
-
 /* =========================================================
    Pricing
    ========================================================= */
@@ -1774,7 +1773,7 @@ html:not(.js) .slider-nav {
   padding-block: var(--section-y);
   padding-inline: var(--gutter);
   --surface-card: var(--color-mist);
-  --surface-hover: #FFF;
+  --surface-hover: #fff;
   --border-subtle: rgba(20, 20, 20, 0.08);
   --text-primary: #141414;
   --text-secondary: #5c5c5c;
@@ -1802,7 +1801,7 @@ html:not(.js) .slider-nav {
   flex-direction: column;
   justify-content: space-between;
   min-height: 360px;
-  transition: 
+  transition:
     background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
     color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1819,7 +1818,7 @@ html:not(.js) .slider-nav {
 
 .tile-badge,
 .tile-loc {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.04em;
@@ -1828,7 +1827,10 @@ html:not(.js) .slider-nav {
   border-radius: var(--radius-pill);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
-  transition: border-color 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .tile-badge {

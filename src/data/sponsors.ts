@@ -36,7 +36,10 @@ export const sponsors: Sponsor[] = [
   {
     name: "Parkside Eyecare",
     role: "Bronze Sponsor",
-    image: { src: "/images/sponsor-parkside.jpg", alt: "Various luxury glasses from Parkside Eyecare" },
+    image: {
+      src: "/images/sponsor-parkside.jpg",
+      alt: "Various luxury glasses from Parkside Eyecare",
+    },
     socials: [
       {
         label: "Parkside Eyecare website",

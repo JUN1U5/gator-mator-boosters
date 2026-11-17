@@ -20,7 +20,10 @@ export const hero = {
   ] satisfies HeroWord[],
   description:
     "Welcome to the official site for the Green Level High School Visual Arts and Dance Boosters. We aim to enrich the visual arts & dance educational experience of Green Level High School students through effective support and collaboration with the school faculty and staff.",
-  cta: { label: "Become a Booster!", href: "/#cta-support" } satisfies CallToAction,
+  cta: {
+    label: "Become a Booster!",
+    href: "/#cta-support",
+  } satisfies CallToAction,
   image: {
     src: "/images/dance-teal.jpg",
     alt: "Green Level High School dancers perform on stage against a blue-green backdrop",
@@ -39,13 +42,16 @@ export const hero = {
 export const About = {
   title: "About the Boosters",
   intro:
-  "Founded in 2026, the Green Level Visual Arts and Dance Boosters is a 501(c)(3) nonprofit organization that supports the arts at Green Level High School (GLHS). We are a registered public charity, run by volunteers. Because we believe artistic expression enriches lives, our mission is to make dance and visual arts accessible to every student and the broader GLHS community. We do so by partnering with GLHS visual arts and dance faculty to fund and support their programs. Our support has included art materials and equipment; production costs, including costumes, sets, and royalties; guest artists; field trips; and other enrichment opportunities. You can support the arts at Green Level through one-off donations, memberships, and corporate sponsorships. See the Ludus pages below to donate, volunteer, or buy tickets for upcoming events.",
+    "Founded in 2026, the Green Level Visual Arts and Dance Boosters is a 501(c)(3) nonprofit organization that supports the arts at Green Level High School (GLHS). We are a registered public charity, run by volunteers. Because we believe artistic expression enriches lives, our mission is to make dance and visual arts accessible to every student and the broader GLHS community. We do so by partnering with GLHS visual arts and dance faculty to fund and support their programs. Our support has included art materials and equipment; production costs, including costumes, sets, and royalties; guest artists; field trips; and other enrichment opportunities. You can support the arts at Green Level through one-off donations, memberships, and corporate sponsorships. See the Ludus pages below to donate, volunteer, or buy tickets for upcoming events.",
   image: {
     src: "/images/GLHS-1.jpg",
     alt: "The Green Level High School campus, with the school building in the background and a tree in the foreground",
   },
-  cta2: {label: "Support Dance", href: "https://glhsdance.ludus.com"},
-  cta: { label: "Support the Visual Arts", href: "https://glhsarts.ludus.com" } satisfies CallToAction,
+  cta2: { label: "Support Dance", href: "https://glhsdance.ludus.com" },
+  cta: {
+    label: "Support the Visual Arts",
+    href: "https://glhsarts.ludus.com",
+  } satisfies CallToAction,
 };
 
 export const scheduleSection = {
@@ -58,9 +64,11 @@ export const scheduleSection = {
 
 export const sponsorsSection = {
   title: "Thank You, Sponsors!",
-  intro:
-    "Our patrons and sponsors make the arts possible for GLHS students.",
-  cta: { label: "Become a Sponsor", href: "mailto:contact@glhsvad.org" } satisfies CallToAction,
+  intro: "Our patrons and sponsors make the arts possible for GLHS students.",
+  cta: {
+    label: "Become a Sponsor",
+    href: "mailto:contact@glhsvad.org",
+  } satisfies CallToAction,
 };
 
 export const program = {
