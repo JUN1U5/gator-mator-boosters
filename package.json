@@ -28,7 +28,6 @@
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.5",
     "astro": "^7.4.12",
-    "fsevents": "^2.3.3",
     "npm": "^9.6.2"
   },
   "devDependencies": {
