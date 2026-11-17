@@ -1,0 +1,51 @@
+/* =========================================================
+   Green Level VAD Boosters — design tokens
+   Change colors, type and spacing here; every component reads these.
+   GLHS Brand Colors are --gl-blue and --gl-green here. 
+    See https://greenlevelhs.wcpss.net/brand-identity for more information.
+   ========================================================= */
+:root {
+  /* Color */
+  --color-ink: #1c1b19;
+  --color-blue-ink: #0e253b;
+  --color-stone: #6f6c66;
+  --color-muted: #72706a;
+  --color-line: #e6e4e0;
+  --color-mist: #f5f4f1;
+  --color-sand: #c9b79c;
+  --color-white: #ffffff;
+  --glass: rgba(255, 255, 255, 0.16);
+  --glass-strong: rgba(255, 255, 255, 0.28);
+  --color-error: #9b3d2e;
+  --gl-blue: #002e5d;
+  --gl-green: #43b02a;
+
+  /* Type — the font files are configured in astro.config.mjs (Astro Fonts API). */
+  --font-sans:
+    var(--font-inter-tight), "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+  --font-serif:
+    var(--font-instrument-serif), "Instrument Serif", "Times New Roman",
+    Georgia, serif;
+
+  --fs-display: clamp(3rem, 8.6vw, 8.75rem);
+  --fs-h2: clamp(2.1rem, 4vw, 3.4rem);
+  --fs-h3: 1.5rem;
+  --fs-quote: clamp(1.3rem, 2.2vw, 1.8rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-xs: 0.78rem;
+
+  /* Shape */
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --container: 1380px; /* inner content width */
+  --gutter: clamp(20px, 4vw, 48px); /* side padding outside the container */
+  --section-y: clamp(72px, 9vw, 120px);
+
+  /* Motion */
+  --ease-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
+}

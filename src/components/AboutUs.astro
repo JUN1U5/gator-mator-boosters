@@ -1,0 +1,20 @@
+---
+import { About } from '../data/home';
+import { url } from '../utils/url';
+import Button from './Button.astro';
+
+---
+
+<section class="section focus" id="about-us" aria-labelledby="about-us-title" data-focus>
+  <div class="container focus__grid">
+    <div class="focus__head">
+      <h2 id="about-us-title">{About.title}</h2>
+      <p>{About.intro}</p>
+    <Button class="visit__cta" icon=palette href={About.cta.href}>{About.cta.label}</Button>
+    <Button icon=music href={About.cta2.href}>{About.cta2.label}</Button>
+     </div>
+    <div class="focus__media" id="focus-panel" role="tabpanel"`}>
+      <img src={url(About.image.src)} alt={About.image.alt} width="960" height="1200" loading="lazy" decoding="async" />
+      </div>
+  </div>
+</section>

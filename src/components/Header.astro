@@ -2,8 +2,8 @@
 import Logo from './Logo.astro';
 import Icon from './Icon.astro';
 import MobileMenu from './MobileMenu.astro';
-import { primaryNav, headerActions } from '../data/navitgation';
-import { url, currentPath } from '../url';
+import { primaryNav, headerActions } from '../data/navigation';
+import { url, currentPath } from '../utils/url';
 
 const path = currentPath(Astro.url.pathname);
 
@@ -30,12 +30,7 @@ function current(href: string): 'page' | 'true' | undefined {
     <div class="header-actions">
       {headerActions.schedule && (
         <a class="btn btn--glass" href={url(headerActions.schedule.href)} aria-label={headerActions.schedule.ariaLabel}>
-          
-        </a>
-      )}
-      {headerActions.memberships && (
-        <a class="icon-btn btn--glass" href={url(headerActions.memberships.href)} aria-label={headerActions.memberships.ariaLabel}>
-         
+          <Icon name="ticket" /><span>{headerActions.schedule.label}</span>
         </a>
       )}
       <MobileMenu />

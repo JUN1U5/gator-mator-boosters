@@ -1,0 +1,28 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { site } from '../config/site';
+import ContactCTA from '../components/ContactCTA.astro';
+import TeamGrid from '../components/TeamGrid.astro';
+import AboutUs from '../components/AboutUs.astro';
+
+---
+
+<PageLayout
+  seo={{
+    title: 'Visual Arts and Dance Boosters',
+    description: `Become a booster for ${site.name}: your support makes our programs possible at GLHS.`,
+    image: '/images/GLHS_Dance_2026-88_L.jpg',
+    imageAlt: '',
+  }}
+  hero={{
+    image: { src: '/images/student-art4.png', alt: 'Student art with moon phases' },
+    title: 'About the Visual Arts and Dance Boosters',
+    words: [{ text: 'About' }, { text: 'Our Boosters', serif: true }],
+    lead: 'GLHS Visual Arts and Dance Boosters, Inc. is a tax-exempt 501(c)(3) organization.',
+    imagePosition: 'center 55%',
+  }}
+>
+<AboutUs />
+<TeamGrid />
+<ContactCTA />
+</PageLayout>

@@ -1,86 +1,45 @@
 ---
-// import { SITE } from "../site.config";
-import '../assets/styles.css';
+import Logo from './Logo.astro';
+import Icon from './Icon.astro';
+import BackToTop from './BackToTop.astro';
+import { site } from '../config/site';
+import { footerColumns, legalNav } from '../data/navigation';
+import { url } from '../utils/url';
 
 const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
-  <div class="site-footer__grid">
-    <div class="site-footer__column">
-      <h2 class="site-footer__heading">About Us</h2>
-      <p>
-        Green Level Visual Arts Dance Boosters Inc. is a 509(a)(2) public charity dedicated to supporting the arts at Green Level High School.
-      </p>
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <Logo />
+        <p>{site.footerAbout}</p>
+        {site.socials.length > 0 && (
+          <ul class="footer__social" aria-label="Social media">
+            {site.socials.map((social) => (
+              <li><a href={social.href} aria-label={social.label}><Icon name={social.icon} size={16} /></a></li>
+            ))}
+          </ul>
+        )}
+      </div>
+      {footerColumns.map((column) => (
+        <nav aria-label={column.title}>
+          <h2 class="footer__title">{column.title}</h2>
+          <ul class="footer__links">
+            {column.links.map((link) => <li><a href={url(link.href)}>{link.label}</a></li>)}
+          </ul>
+        </nav>
+      ))}
     </div>
-
-    <div class="site-footer__column">
-      <h2 class="site-footer__heading">Links</h2>
-      <ul class="site-footer__list">
-        <li><a href="https://gldance.weebly.com/">Dance</a></li>
-        <li><a href="https://glarts.weebly.com/">Visual Arts</a></li>
-      </ul>
-    </div>
-
-    <div class="site-footer__column">
-      <h2 class="site-footer__heading">Contact</h2>
-      <ul class="site-footer__list">
-        <li>Email: danceadmin@glhsvad.org</li>
-        <li>Location: <a href="https://greenlevelhs.wcpss.net/">Green Level High School</a></li>
-        <li>Address: 7600 Roberts Road, Cary, NC 27519</li>
-      </ul>
+    <div class="footer__bottom">
+      <p>Copyright &copy; {year} {site.copyright}</p>
+      {legalNav.length > 0 && (
+        <nav aria-label="Legal">
+          {legalNav.map((link) => <a href={url(link.href)}>{link.label}</a>)}
+        </nav>
+      )}
+      <BackToTop />
     </div>
   </div>
 </footer>
-
-
-
-<style>
-
-.site-footer {
-    border-top: 1px solid #868fab;
-    background-color: white;
-    z-index: 10;
-    padding: 48px 24px;
-}
-
-.site-footer__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.site-footer__heading {
-  margin: 0 0 16px;
-  font-size: 1.125rem;
-}
-
-.site-footer__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  
-}
-
-.site-footer__list li + li {
-  margin-top: 10px;
-}
-
-.site-footer a {
-  color: #002E5D;
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .site-footer__grid {
-    grid-template-columns: 1fr;
-  }
-
-
-</style>

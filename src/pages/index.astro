@@ -1,18 +1,20 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import Officers from '../components/Officers.astro';
-import News from '../components/News.astro';
-import Footer from '../components/Footer.astro';
-import About from '../components/About.astro';
-import Header2 from '../components/Header2.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import FirstVisit from '../components/FirstVisit.astro';
+import Testimonials from '../components/Testimonials.astro';
+import Gallery from '../components/Gallery.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+import { businessSchema, websiteSchema } from '../utils/schema';
+import Sponsors from '../components/Sponsors.astro';
+
 ---
 
-<Layout>
-	<Header2 />
-	<Welcome />
-	<About />
-	<Officers />
-	<!-- <News /> -->
-	<Footer />
-</Layout>
+<BaseLayout schema={[websiteSchema(Astro.site), businessSchema(Astro.site)]}>
+  <Hero />
+  <FirstVisit />  
+  <Testimonials />
+  <Gallery />
+  <Sponsors />
+  <ContactCTA />
+</BaseLayout>
