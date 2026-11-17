@@ -22,7 +22,8 @@ export function businessSchema(siteUrl: URL | undefined): Json {
   const { contact } = site;
   const schema: Json = {
     "@context": "https://schema.org",
-    "@type": "USNonprofitType",
+    "@type": "Organization",
+    "nonprofitStatus": "Nonprofit501c3",
     "@id": `${absoluteUrl("/", siteUrl)}#organization`,
     name: site.name,
     description: site.description,
